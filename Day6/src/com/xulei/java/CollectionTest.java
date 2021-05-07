@@ -13,7 +13,7 @@ import java.util.List;
  * @date: 2021-04-28 21:07
  * @since JDK 1.8
  * <p>
- * collection 接口中实现类的对象中添加数据ob时，建议重写equals
+ * collection 接口中实现类的对象中添加数据ob时，必须重写equals
  */
 public class CollectionTest {
     /**
@@ -83,10 +83,10 @@ public class CollectionTest {
         coll.add(new Person("何小玲", 18));
 
         //coll.retainAll()交集：获取当前集合和coll1集合的交集，并返回给当前集合   保留相同的元素  删除不同的元素
-//        Collection collection = Arrays.asList("aa", 123);
-//        System.out.println(coll);
-//        System.out.println(coll.retainAll(collection));
-//        System.out.println(coll);
+        Collection collection = Arrays.asList("aa", 123);
+        System.out.println(coll);
+        System.out.println(coll.retainAll(collection));
+        System.out.println(coll);
 
         //equals(Object obj) 判断当前对象与OBJ对象元素是否相同
         Collection coll1 = new ArrayList();
@@ -113,13 +113,13 @@ public class CollectionTest {
         System.out.println(coll.hashCode());
 
 
-        //集合——》数组
+        //集合 转 数组
         Object[] objects = coll.toArray();
         for (Object obj:objects){
             System.out.println(obj);
         }
 
-        //数组——》集合  调用Arrays类的静态方法asLise()
+        //数组 转 集合  调用Arrays类的静态方法asLise()
         List<Object> objects1 = Arrays.asList(objects);
         System.out.println(objects1);
 
