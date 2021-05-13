@@ -30,7 +30,7 @@ public class MapTest {
         Map map =new HashMap();
         map.put(1,123);
         map.put(1,456);
-        System.out.println();
+        System.out.println(map);
 
     }
 
